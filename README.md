@@ -1,4 +1,6 @@
-# FirstRedisPython
+# First Redis Python (CRUD)
+
+A tiny **python** web application based on **Flask** to set, get, expire, delete keys of **Redis** database easily with direct link at the browser.
 
 ## Using
 
