@@ -13,6 +13,9 @@ flask run
 **Set a new key with value:**
 `http://127.0.0.1:5000/set/name/Max`
 
+**Update the value of a key:**
+`http://127.0.0.1:5000/update/name/NewMax`
+
 **Get value of a key:**
 `http://127.0.0.1:5000/get/name`
 
