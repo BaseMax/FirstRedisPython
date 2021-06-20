@@ -20,6 +20,11 @@ flask run
 **Set expire time on a key:**
 `http://127.0.0.1:5000/expire/name/10`
 
+**Delete a key:**
+`http://127.0.0.1:5000/delete/name`
+
+**Note:** You do not have to put `/` at the last of the URL, this is not allowed.
+
 ### References
 
 - https://redis.io/commands/expire
