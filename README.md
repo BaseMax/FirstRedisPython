@@ -8,17 +8,17 @@ flask run
 
 ## Routes
 
-**Set a new key with value: **
-http://127.0.0.1:5000/set/name/Max
+**Set a new key with value:**
+`http://127.0.0.1:5000/set/name/Max`
 
-**Get value of a key: **
-http://127.0.0.1:5000/get/name
+**Get value of a key:**
+`http://127.0.0.1:5000/get/name`
 
-**Set value to a key with expire time: **
-http://127.0.0.1:5000/set/name/Max/5
+**Set value to a key with expire time:**
+`http://127.0.0.1:5000/set/name/Max/5`
 
-**Set expire time on a key: **
-http://127.0.0.1:5000/expire/name/10
+**Set expire time on a key:**
+`http://127.0.0.1:5000/expire/name/10`
 
 ### References
 
