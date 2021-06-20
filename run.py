@@ -33,6 +33,15 @@ def get(key):
 	else:
 		return f"{key} is not exists"
 
+# delete
+@app.route('/delete/<string:key>')
+def delete(key):
+	if redis_cache.exists(key):
+		redis_cache.delete(key)
+		return f"{key} deleted!"
+	else:
+		return f"{key} is not exists"
+
 # expire
 @app.route('/expire/<string:key>/<int:expired>')
 def expire(key, expired):
