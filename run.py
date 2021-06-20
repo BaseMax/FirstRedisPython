@@ -10,20 +10,26 @@ app = Flask(__name__)
 # set with expire
 @app.route('/set/<string:key>/<string:value>/<int:expired>')
 def set_with_expire(key, value, expired):
-	if redis_cache.exists(key):
-		pass
-	else:
-		redis_cache.set(key, value, ex=expired)
+	redis_cache.set(key, value, ex=expired)
 	return "OK"
 
 # set
 @app.route('/set/<string:key>/<string:value>')
 def set(key, value):
 	if redis_cache.exists(key):
-		pass
+		return f"{key} is already exists, please use `update` route to change the value!"
 	else:
 		redis_cache.set(key, value)
-	return "OK"
+		return "OK"
+
+# update
+@app.route('/update/<string:key>/<string:value>')
+def update(key, value):
+	if redis_cache.exists(key):
+		redis_cache.set(key, value)
+		return "OK"
+	else:
+		return f"{key} is not exists"
 
 # get
 @app.route('/get/<string:key>')
